@@ -89,7 +89,6 @@ def coroutine(sub_domain,main_domain):
         if A_list == A_ng:
             pass
         else:
-            print url + '   ====>>    ' + str(A_list)
             domains.append(domain)
     sem.release()
 
@@ -123,4 +122,4 @@ if __name__ == '__main__':
         mydb.commit()
     mycursor.close()
     mydb.close()
-    print  "耗时：" + str(t2 - t1) + "s"
+    print("耗时：" + str(t2 - t1) + "s")
