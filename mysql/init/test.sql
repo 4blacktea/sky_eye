@@ -1,3 +1,8 @@
+-- 创建数据库
+CREATE DATABASE  `sky_eye` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+grant all PRIVILEGES on sky_eye.* to root@'%' identified by 'adminermysql';
+flush privileges;
+use sky_eye;
 -- 创建domain表
 CREATE TABLE IF NOT EXISTS `domain` (
   `id` int(8) NOT NULL,
