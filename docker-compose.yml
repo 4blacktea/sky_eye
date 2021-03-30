@@ -13,6 +13,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=adminermysql
     ports:
-      - "33006:33006"
+      - "33006:3306"
     restart: always
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
