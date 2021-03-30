@@ -22,6 +22,7 @@ else:
 def my_mysql():
     mydb = mysql.connector.connect(
         host="localhost",       # 数据库主机地址
+        port=33006,
         user="root",    # 数据库用户名
         passwd="adminermysql",   # 数据库密码
         database="sky_eye"
