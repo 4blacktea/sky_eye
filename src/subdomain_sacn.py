@@ -38,9 +38,9 @@ else:
 def my_mysql():
     mydb = mysql.connector.connect(
         host="localhost",       # 数据库主机地址
-        user="skyeye",    # 数据库用户名
-        passwd="xxxxxxxxxxxxxxx",   # 数据库密码
-        database="skyeye"
+        user="root",    # 数据库用户名
+        passwd="adminermysql",   # 数据库密码
+        database="sky_eye"
     )
     mycursor = mydb.cursor(buffered=True)
     return mycursor,mydb
