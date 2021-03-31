@@ -41,7 +41,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=adminermysql
     ports:
-      - "33006:3306"
+      - "3306:3306"
     restart: always
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-file /docker-entrypoint-initdb.d/test.sql
 networks:
