@@ -2,7 +2,6 @@
 function adminer_object() {
     class AdminerSoftware extends Adminer {
         function name() {
-            // custom name in title and heading
             return 'SKY EYE';
         }
         function credentials() {
