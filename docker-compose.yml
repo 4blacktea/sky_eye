@@ -3,7 +3,7 @@ version: '3'
 services:
   worker:
     build: ./src
-    command: python3 /src/cron.py
+    command: python3 cron.py
   nginx:
     image: nginx:latest
     # 端口映射

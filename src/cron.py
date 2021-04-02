@@ -1,6 +1,5 @@
 import datetime
 from apscheduler.schedulers.blocking import BlockingScheduler
-from app.untils.log_builder import sys_logging
 import os
 
 
@@ -15,7 +14,5 @@ def run():
 if __name__ == '__main__':
     try:
         scheduler.start()
-        sys_logging.debug("statistic scheduler start success")
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown()
-        sys_logging.debug("statistic scheduler start-up fail")
