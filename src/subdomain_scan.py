@@ -51,7 +51,7 @@ def my_mysql():
 def dns_query(domain, type):
     A_list = []
     try:
-        dnsquery = dns.resolver.query(domain, type)
+        dnsquery = dns.resolver.resolve(domain, type)
         for i in dnsquery.response.answer:
             for j in i:
                 if str(j).strip() not in nginx_ips:
@@ -97,7 +97,7 @@ def coroutine(sub_domain,main_domain):
 # 协程扫描
 def scan():
     sub_domains = get_dict()
-    gevent.joinall([gevent.spawn(coroutine, [sub_domain, domain]) for sub_domain in sub_domains])
+    gevent.joinall([gevent.spawn(coroutine, sub_domain, domain) for sub_domain in sub_domains])
 
 
 # 入口

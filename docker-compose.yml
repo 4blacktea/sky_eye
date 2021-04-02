@@ -4,6 +4,8 @@ services:
   worker:
     build: ./src
     command: python3 cron.py
+    networks:
+      - app_net
   nginx:
     image: nginx:latest
     # 端口映射
