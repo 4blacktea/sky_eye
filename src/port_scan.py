@@ -21,8 +21,8 @@ else:
 # 数据库连接
 def my_mysql():
     mydb = mysql.connector.connect(
-        host="localhost",       # 数据库主机地址
-        port=33006,
+        host="10.10.10.2",       # 数据库主机地址
+        port=3306,
         user="root",    # 数据库用户名
         passwd="adminermysql",   # 数据库密码
         database="sky_eye"
@@ -80,7 +80,7 @@ def nmap_A_scan(network_prefix,main_domain):
         exit_port.append(x[0])
     insert_sql = "INSERT INTO port (id, domain, main_domain, domain_group, port, protocol, p_version, p_status, createtime, updatetime) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     for i in res_tol:
-        print exit_port
+        print(exit_port)
         if i[4] in exit_port:
             updata_sql = "UPDATE port set updatetime=%s where domain=%s and port=%s"
             mycursor.execute(updata_sql,(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),i[1],i[4]))

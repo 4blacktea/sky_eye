@@ -5,3 +5,4 @@ COPY ./ /app
 WORKDIR /app
 RUN yum install python38 -y
 RUN pip3 install -r requirements.txt
+RUN chmod +x run.sh
