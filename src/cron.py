@@ -7,7 +7,7 @@ import os
 scheduler = BlockingScheduler()   # 后台运行
 
 # 设置为每日15:30:30时执行一次调度程序
-@scheduler.scheduled_job("cron", day_of_week='*', hour='15', minute='30', second='30')
+@scheduler.scheduled_job("cron", day_of_week='*', hour='17', minute='30', second='35')
 def run():
     os.system("./run.sh megvii.com")
 
