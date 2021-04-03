@@ -7,6 +7,6 @@ def run():
     os.system("./run.sh megvii.com")
 
 sched = BlockingScheduler()
-sched.add_job(run, CronTrigger.from_crontab('8 3 * * *'))
+sched.add_job(run, CronTrigger.from_crontab('5 3 * * *'))
 sched.start()
 
