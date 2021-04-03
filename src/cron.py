@@ -6,6 +6,6 @@ def job_function():
         print("Hello World")
 
 sched = BlockingScheduler()
-sched.add_job(job_function, CronTrigger.from_crontab('* * * * *'))
+sched.add_job(job_function, CronTrigger.from_crontab('15 2 * * *'))
 sched.start()
 
