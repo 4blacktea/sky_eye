@@ -18,6 +18,7 @@ def my_mysql():
     return mycursor,mydb
 
 
+# 加载定时任务配置
 def get_corn():
     mycursor,mydb = my_mysql()
     cron_rules = []
