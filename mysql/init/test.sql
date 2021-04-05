@@ -25,4 +25,15 @@ CREATE TABLE IF NOT EXISTS `port` (
   `createtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=1715 DEFAULT CHARSET=utf8mb4;
+-- 创建monitor表
+CREATE TABLE IF NOT EXISTS `monitor_rule` (
+  `id` int(8) NOT NULL,
+  `target_type` varchar(200) NOT NULL,
+  `target` varchar(200) NOT NULL,
+  `scan_strategy` varchar(200) NOT NULL,
+  `strategy_vule` varchar(200) NOT NULL,
+  `is_open` varchar(100) NOT NULL DEFAULT '0',
+  `createtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
