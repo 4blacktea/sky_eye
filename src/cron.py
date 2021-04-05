@@ -30,10 +30,9 @@ def get_corn():
     return cron_rules
 
 
-
-
 def run():
     os.system("./run.sh megvii.com")
+
 
 crons = get_corn():
 forn cron_s in crons:
