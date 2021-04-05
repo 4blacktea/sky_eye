@@ -22,18 +22,23 @@ def my_mysql():
 def get_corn():
     mycursor,mydb = my_mysql()
     cron_rules = []
-    select_sql = "select * from cron_rules where is_open=%s"
+    select_sql = "select * from monitor where is_open=%s"
     mycursor.execute(select_sql,("true",))
     myresult = mycursor.fetchall()
     for x in myresult:
         cron_rules.append(x[0])
-    pass
+    return cron_rules
+
+
 
 
 def run():
     os.system("./run.sh megvii.com")
 
-sched = BlockingScheduler()
-sched.add_job(run, CronTrigger.from_crontab('5 3 * * *'))
-sched.start()
+crons = get_corn():
+forn cron_s in crons:
+    if cron_s[3] == "crontab"
+    sched = BlockingScheduler()
+    sched.add_job(run, CronTrigger.from_crontab(cron_s[4]))
+    sched.start()
 
