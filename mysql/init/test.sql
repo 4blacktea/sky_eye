@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `port` (
   `updatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=1715 DEFAULT CHARSET=utf8mb4;
 -- 创建monitor表
-CREATE TABLE IF NOT EXISTS `monitor_rule` (
+CREATE TABLE IF NOT EXISTS `monitor` (
   `id` int(8) identity(1,1) primary key NOT NULL,
   `target_type` varchar(200) NOT NULL,
   `target` varchar(200) NOT NULL,
