@@ -34,7 +34,7 @@ def run():
     os.system("./run.sh megvii.com")
 
 
-crons = get_corn():
+crons = get_corn()
 forn cron_s in crons:
     if cron_s[3] == "crontab"
     sched = BlockingScheduler()
