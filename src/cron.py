@@ -29,7 +29,9 @@ def get_corn():
     select_sql = "select * from monitor where is_open=%s"
     mycursor.execute(select_sql,("true",))
     myresult = mycursor.fetchall()
+    print(myresult, flush=True)
     for x in myresult:
+        print(x, flush=True)
         cron_rules.append(x[0])
     return cron_rules
 
