@@ -37,6 +37,8 @@ def get_corn():
 def run():
     os.system("./run.sh megvii.com")
 
+    
+print("Hello? Anyone there?", flush=True)
 while True:
     crons = []
     while True:
@@ -46,6 +48,7 @@ while True:
         except:
             time.sleep(3)
     for cron_s in crons:
+        print(cron_s, flush=True)
         if cron_s[3] == "crontab":
             sched = BlockingScheduler()
             sched.add_job(run, CronTrigger.from_crontab(cron_s[4]))
