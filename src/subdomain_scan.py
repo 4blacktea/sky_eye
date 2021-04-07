@@ -91,8 +91,10 @@ def coroutine(sub_domain,main_domain):
         print(A_list, flush=True)
         print(A_ng, flush=True)
         if A_list == A_ng:
+            print("ok", flush=True)
             pass
         else:
+            print("not ok", flush=True)
             domains.append(domain)
     sem.release()
 
