@@ -36,8 +36,8 @@ def run():
 
 crons = get_corn()
 for cron_s in crons:
-    if cron_s[3] == "crontab"
-    sched = BlockingScheduler()
-    sched.add_job(run, CronTrigger.from_crontab(cron_s[4]))
-    sched.start()
+    if cron_s[3] == "crontab":
+        sched = BlockingScheduler()
+        sched.add_job(run, CronTrigger.from_crontab(cron_s[4]))
+        sched.start()
 
