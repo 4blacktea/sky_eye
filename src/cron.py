@@ -42,6 +42,7 @@ while True:
     while True:
         try:
             crons = get_corn()
+            break
         except:
             time.sleep(3)
     for cron_s in crons:
