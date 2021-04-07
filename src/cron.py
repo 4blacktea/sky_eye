@@ -14,8 +14,12 @@ def my_mysql():
         passwd="adminermysql",   # 数据库密码
         database="sky_eye"
     )
-    mycursor = mydb.cursor(buffered=True)
-    return mycursor,mydb
+    while True:
+        try:
+            mycursor = mydb.cursor(buffered=True)
+            return mycursor,mydb
+        except:
+            time.sleep(3)
 
 
 # 加载定时任务配置
