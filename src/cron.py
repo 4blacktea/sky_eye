@@ -30,7 +30,7 @@ def get_corn():
     mycursor.execute(select_sql,("true",))
     myresult = mycursor.fetchall()
     print(myresult, flush=True)
-    for x in myresult[0]:
+    for x in myresult:
         print(x, flush=True)
         cron_rules.append(x)
     return cron_rules
