@@ -87,6 +87,8 @@ def coroutine(sub_domain,main_domain):
     if len(A_list) != 0:
         A_list.sort()
         A_ng.sort()
+        print(A_list, flush=True)
+        print(A_ng, flush=True)
         if A_list == A_ng:
             pass
         else:
