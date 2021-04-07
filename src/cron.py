@@ -39,11 +39,12 @@ def get_corn():
 def run():
     os.system("./run.sh megvii.com")
 
-
-crons = get_corn()
-for cron_s in crons:
-    if cron_s[3] == "crontab":
-        sched = BlockingScheduler()
-        sched.add_job(run, CronTrigger.from_crontab(cron_s[4]))
-        sched.start()
+while True:
+    crons = get_corn()
+    for cron_s in crons:
+        if cron_s[3] == "crontab":
+            sched = BlockingScheduler()
+            sched.add_job(run, CronTrigger.from_crontab(cron_s[4]))
+            sched.start()
+    time.sleep(86400)
 
