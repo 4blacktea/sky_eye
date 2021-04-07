@@ -102,6 +102,7 @@ def scan():
 
 # 入口
 if __name__ == '__main__':
+    print('start subdomain scan', flush=True)
     t1 = time()         
     scan()
     t2 = time()
@@ -123,4 +124,4 @@ if __name__ == '__main__':
         mydb.commit()
     mycursor.close()
     mydb.close()
-    print("耗时：" + str(t2 - t1) + "s")
+    print("耗时：" + str(t2 - t1) + "s", flush=True)
