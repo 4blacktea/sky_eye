@@ -9,4 +9,4 @@ RUN chmod +x run.sh
 RUN yum install nmap -y
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
-RUN apt-get -q update && apt-get -qy install netcat
+RUN yum install netcat -y
