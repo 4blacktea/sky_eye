@@ -106,5 +106,7 @@ def get_ips():
 
 
 if __name__ == '__main__':
+    print('start port scan', flush=True)
     for domain in get_ips():
         nmap_A_scan(domain,main_domain)
+    print('end port scan', flush=True)
