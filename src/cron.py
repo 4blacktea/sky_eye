@@ -48,6 +48,7 @@ while True:
         except:
             time.sleep(3)
     for cron_s in crons:
+        print(crons, flush=True)
         print(cron_s, flush=True)
         if cron_s[3] == "crontab":
             sched = BlockingScheduler()
