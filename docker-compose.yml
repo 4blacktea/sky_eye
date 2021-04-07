@@ -48,7 +48,7 @@ services:
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-file /docker-entrypoint-initdb.d/test.sql
   worker:
     build: ./src
-    command: python3 cron.py'
+    command: python3 cron.py
     networks:
       - app_net
 networks:
