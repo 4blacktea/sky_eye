@@ -16,12 +16,10 @@ def my_mysql():
         passwd="adminermysql",   # 数据库密码
         database="sky_eye"
     )
-    while True:
-        try:
-            mycursor = mydb.cursor(buffered=True)
-            return mycursor,mydb
-        except:
-            time.sleep(3)
+    mycursor = mydb.cursor(buffered=True)
+    return mycursor,mydb
+
+
 
 
 # 加载定时任务配置
@@ -40,7 +38,12 @@ def run():
     os.system("./run.sh megvii.com")
 
 while True:
-    crons = get_corn()
+    crons = []
+    while True:
+        try:
+            crons = get_corn()
+        except:
+            time.sleep(3)
     for cron_s in crons:
         if cron_s[3] == "crontab":
             sched = BlockingScheduler()
