@@ -5,7 +5,7 @@ flush privileges;
 use sky_eye;
 -- 创建domain表
 CREATE TABLE IF NOT EXISTS `domain` (
-  `id` int(8) UNSIGNED AUTO_INCREMENT primary key NOT NULL,
+  `id` int(8) AUTO_INCREMENT primary key NOT NULL,
   `domain` varchar(200) NOT NULL,
   `main_domain` varchar(200) NOT NULL,
   `domain_group` varchar(200) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `domain` (
 ) ENGINE=InnoDB AUTO_INCREMENT=351938 DEFAULT CHARSET=utf8mb4;
 -- 创建port表
 CREATE TABLE IF NOT EXISTS `port` (
-  `id` int(8) UNSIGNED AUTO_INCREMENT primary key NOT NULL,
+  `id` int(8) AUTO_INCREMENT primary key NOT NULL,
   `domain` varchar(200) NOT NULL,
   `main_domain` varchar(200) NOT NULL,
   `domain_group` varchar(200) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `port` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1715 DEFAULT CHARSET=utf8mb4;
 -- 创建monitor表
 CREATE TABLE IF NOT EXISTS `monitor` (
-  `id` int(8) UNSIGNED AUTO_INCREMENT primary key NOT NULL,
+  `id` int(8) AUTO_INCREMENT primary key NOT NULL,
   `target_type` varchar(200) NOT NULL,
   `target` varchar(200) NOT NULL,
   `scan_strategy` varchar(200) NOT NULL,
