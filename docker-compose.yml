@@ -50,7 +50,7 @@ services:
     build: ./src
     depends_on:
       - "mysql"
-    command: python3 cron.py
+    command: sh -c './wait-for.sh rabbitmq:15672 -- python3 cron.py'
     networks:
       - app_net
 networks:
