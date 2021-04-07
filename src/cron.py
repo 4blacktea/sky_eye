@@ -3,9 +3,11 @@ from apscheduler.triggers.cron import CronTrigger
 from apscheduler.triggers.combining import OrTrigger
 import os
 import mysql.connector
+import time
 
 
 # 数据库连接
+# 解决了mysql启动前脚本启动导致崩溃问题
 def my_mysql():
     mydb = mysql.connector.connect(
         host="10.10.10.2",       # 数据库主机地址
