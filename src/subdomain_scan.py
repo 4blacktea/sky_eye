@@ -88,13 +88,11 @@ def coroutine(sub_domain,main_domain):
     if len(A_list) != 0:
         A_list.sort()
         A_ng.sort()
-        print(A_list, flush=True)
-        print(A_ng, flush=True)
         if A_list == A_ng:
-            print("ok", flush=True)
+            print('target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "ok", flush=True)
             pass
         else:
-            print("not ok", flush=True)
+            print('target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "not ok", flush=True)
             domains.append(domain)
     sem.release()
 
