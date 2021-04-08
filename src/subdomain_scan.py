@@ -99,7 +99,7 @@ def coroutine(sub_domain,main_domain,A_ng):
 
 # 协程扫描
 def scan():
-    A_ng = get_A("wdqdqwdqwd13dqw32rfewg." + main_domain)
+    A_ng = get_A("wdqdqwdqwd13dqw32rfewg." + domain)
     sub_domains = get_dict()
     gevent.joinall([gevent.spawn(coroutine, sub_domain, domain, A_ng) for sub_domain in sub_domains])
 
