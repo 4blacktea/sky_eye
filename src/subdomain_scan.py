@@ -78,11 +78,11 @@ def get_dict():
 
 
 # 协程调用
-def coroutine(sub_domain,main_domain):
+def coroutine(sub_domain,main_domain,A_ng):
     domain = sub_domain + '.' + main_domain
     sem.acquire()
     ## 判断泛解析，最好挪到循环外
-    A_ng = get_A("wdqdqwdqwd13dqw32rfewg." + main_domain)
+    #A_ng = get_A("wdqdqwdqwd13dqw32rfewg." + main_domain)
     A_list = get_A(domain)
     # 判断是否有A记录，目前还有点坑，cname也会被记到这
     if len(A_list) != 0:
@@ -99,8 +99,9 @@ def coroutine(sub_domain,main_domain):
 
 # 协程扫描
 def scan():
+    A_ng = get_A("wdqdqwdqwd13dqw32rfewg." + main_domain)
     sub_domains = get_dict()
-    gevent.joinall([gevent.spawn(coroutine, sub_domain, domain) for sub_domain in sub_domains])
+    gevent.joinall([gevent.spawn(coroutine, sub_domain, domain, A_ng) for sub_domain in sub_domains])
 
 
 # 入口
