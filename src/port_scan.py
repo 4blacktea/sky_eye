@@ -35,8 +35,10 @@ def my_mysql():
 def nmap_A_scan(network_prefix,main_domain):
     res_tol = []
     nm = nmap.PortScanner()
+    print('starting   ' + network_prefix, flush=True)
     # 配置nmap扫描参数
     scan_raw_result = nm.scan(network_prefix, '1-65535')
+    print('started   ' + network_prefix, flush=True)
     print(scan_raw_result)
     # 分析扫描结果
     for host, result in scan_raw_result['scan'].items():
