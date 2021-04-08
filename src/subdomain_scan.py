@@ -24,8 +24,8 @@ sem = Semaphore(1000)
 # 域名
 domain = ''
 # 字典位置
-#dict_path = './dicts/dict_subdomain.txt'
-dict_path = './dicts/test.txt'
+dict_path = './dicts/dict_subdomain.txt'
+#dict_path = './dicts/test.txt'
 # 需要排除的反向代理ip池
 nginx_ips = ['203.107.45.163']
 # 获取参数
