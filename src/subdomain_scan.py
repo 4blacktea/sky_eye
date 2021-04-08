@@ -92,7 +92,7 @@ def coroutine(sub_domain,main_domain):
             #print('domain: ' + domain + '  target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "ngixn fix", flush=True)
             pass
         else:
-            print('domain: ' + domain + '  target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "not ng add table!!!!", flush=True)
+            print('domain: ' + domain + '  target: ' + str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "not ng add table!!!!", flush=True)
             domains.append(domain)
     sem.release()
 
