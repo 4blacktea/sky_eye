@@ -89,10 +89,10 @@ def coroutine(sub_domain,main_domain):
         A_list.sort()
         A_ng.sort()
         if A_list == A_ng:
-            print('target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "ok", flush=True)
+            #print('domain: ' + domain + '  target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "ngixn fix", flush=True)
             pass
         else:
-            print('target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "not ok", flush=True)
+            print('domain: ' + domain + '  target: 'str(A_list) + '     ng:' + str(A_ng) +" ____ "+ "not ng add table!!!!", flush=True)
             domains.append(domain)
     sem.release()
 
