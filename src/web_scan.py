@@ -132,7 +132,7 @@ def cut_screen(url, domain, port, protocol):
             mydb.commit()
             #print "__________________++++++++++++++++++__________________"
         else:
-            insert_sql = "INSERT INTO web_result (id, domain, web_port, http_protocol, web_url, finger, screen_pic, creattime, updatetime, ext) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            insert_sql = "INSERT INTO web (id, domain, web_port, http_protocol, web_url, finger, screen_pic, creattime, updatetime, ext) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
             mycursor.execute(insert_sql,(0,domain,port,protocol,url,"unknown finger","/pics/"+str(base64.b64encode(url.encode("utf-8")),encoding="utf-8")+".png",datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),"-"))
             mydb.commit()
             mycursor.close()
