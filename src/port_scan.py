@@ -37,7 +37,7 @@ def nmap_A_scan(network_prefix,main_domain):
     nm = nmap.PortScanner()
     print('starting   ' + network_prefix, flush=True)
     # 配置nmap扫描参数
-    scan_raw_result = nm.scan(network_prefix, '1-65535')
+    scan_raw_result = nm.scan(network_prefix, '22-1000')
     print('started   ' + network_prefix, flush=True)
     print(scan_raw_result)
     # 分析扫描结果
