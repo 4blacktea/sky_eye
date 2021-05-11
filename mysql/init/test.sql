@@ -25,6 +25,19 @@ CREATE TABLE IF NOT EXISTS `port` (
   `createtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=1715 DEFAULT CHARSET=utf8mb4;
+--创建web表
+CREATE TABLE IF NOT EXISTS `web` (
+  `id` int(8) NOT NULL,
+  `domain` text NOT NULL,
+  `web_port` int(8) NOT NULL,
+  `http_protocol` varchar(200) NOT NULL,
+  `web_url` varchar(200) NOT NULL,
+  `finger` varchar(200) NOT NULL,
+  `screen_pic` varchar(200) NOT NULL,
+  `creattime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ext` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=1002 DEFAULT CHARSET=utf8mb4;
 -- 创建monitor表
 CREATE TABLE IF NOT EXISTS `monitor` (
   `id` int(8) AUTO_INCREMENT primary key NOT NULL,
