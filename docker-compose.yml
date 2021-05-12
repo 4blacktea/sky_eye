@@ -56,7 +56,10 @@ services:
       app_net:
         # 固定子网ip，网段必须在子网络10.10.*.*
         ipv4_address: 10.10.10.3
-      
+    build:
+      context: ./src
+      shm_size: '1gb'
+ 
 networks:
   # 配置docker network
   app_net:

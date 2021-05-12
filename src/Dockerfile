@@ -1,4 +1,4 @@
-FROM centos:8.2.2004
+FROM centos:7.8.2003
 
 RUN mkdir /app
 COPY ./ /app
