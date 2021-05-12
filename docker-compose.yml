@@ -2,10 +2,10 @@
 version: '3'
 services:
   nginx:
-    image: nginx:latest
+    image: anroe/nginx-headers-more:latest
     # 端口映射
     ports:
-      - "80:80"
+      - "8080:8080"
     # 依赖关系 先跑php
     depends_on:
       - "php"
