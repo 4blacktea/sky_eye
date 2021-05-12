@@ -4,6 +4,7 @@ RUN mkdir /app
 COPY ./ /app
 WORKDIR /app
 RUN yum install python3 -y
+RUN yum install gcc -y
 RUN pip3 install -r requirements.txt
 RUN chmod +x run.sh
 RUN yum install nmap -y
