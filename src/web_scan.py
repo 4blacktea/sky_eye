@@ -126,7 +126,7 @@ def cut_screen(url, domain, port, protocol):
 
 
         if url in exit_url:
-            updata_sql_1 = "UPDATE web_result set updatetime=%s where web_url=%s "
+            updata_sql_1 = "UPDATE web set updatetime=%s where web_url=%s "
             #mycursor.execute(updata_sql_1,(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),url))
             mycursor.execute(updata_sql_1,(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),url))
             mydb.commit()
