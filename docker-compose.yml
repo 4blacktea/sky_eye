@@ -48,9 +48,14 @@ services:
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-file /docker-entrypoint-initdb.d/test.sql
   worker:
     build: ./src
-    command: python3 cron.py
+    command: python3 cron.py;cd ./result_pic;python3 -m SimpleHTTPServer
+    ports:
+      - "8000:8000"
     networks:
-      - app_net
+      app_net:
+        # 固定子网ip，网段必须在子网络10.10.*.*
+        ipv4_address: 10.10.10.3
+      
 networks:
   # 配置docker network
   app_net:
