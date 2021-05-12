@@ -1,6 +1,6 @@
 var pics = document.querySelectorAll('[id$="screen_pic]"]');
 for(var i=0;i<pics.length;i++){
-    pics[i].innerHTML="<img src="+pics[i].innerText+"></img>"
+    pics[i].innerHTML="<img src= http://23.254.225.15:8000/"+pics[i].innerText+"></img>"
 
 };
 var numofselect = document.getElementsByClassName("select").length;

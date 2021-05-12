@@ -107,9 +107,9 @@ def cut_screen(url, domain, port, protocol):
     if judge_http(url):
         print(url + "___________success")
         starttime= time.time()
-        #run_cmd(cmd % ("./result_pic/"+str(base64.b64encode(url.encode("utf-8")),encoding="utf-8")+".png",url))
+        #run_cmd(cmd % ("./result_pic/pics/"+str(base64.b64encode(url.encode("utf-8")),encoding="utf-8")+".png",url))
         #run_cmd(cmd % ("mkdir ")
-        run_cmd(cmd % ("/www/wwwroot/www/pics/"+str(base64.b64encode(url.encode("utf-8")),encoding="utf-8")+".png",url))
+        run_cmd(cmd % ("./result_pic/pics/"+str(base64.b64encode(url.encode("utf-8")),encoding="utf-8")+".png",url))
         run_cmd("chmod 777 /www/wwwroot/www/pics/*")
         mycursor,mydb = my_mysql()
 
