@@ -57,7 +57,7 @@ def my_mysql():
 
 # 带有timeout机制的稳定的os命令执行库
 def run_cmd(cmd_string, timeout=10):
-    print("命令为：" + cmd_string)
+    print("command is：" + cmd_string)
     p = subprocess.Popen(cmd_string, stderr=subprocess.STDOUT, stdout=subprocess.PIPE, shell=True, close_fds=True,
                          start_new_session=True)
  

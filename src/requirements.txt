@@ -27,7 +27,6 @@ idna-ssl==1.1.0
 importlib-metadata==2.0.0
 jsonschema==3.2.0
 lxml==4.6.2
-multidict==5.1.0
 mysql-connector==2.2.9
 paramiko==2.7.2
 progressbar2==3.53.1
