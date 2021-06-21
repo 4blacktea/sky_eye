@@ -1,4 +1,5 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.triggers.combining import OrTrigger
 import os
@@ -53,8 +54,8 @@ while True:
         print(crons, flush=True)
         print(cron_s, flush=True)
         if cron_s[3] == "crontab":
-            sched = BlockingScheduler()
+            sched = BackgroundScheduler()
             sched.add_job(run, CronTrigger.from_crontab(cron_s[4]), args=[cron_s[2]])
-    sched.start()
+            sched.start()
     time.sleep(86400)
 
