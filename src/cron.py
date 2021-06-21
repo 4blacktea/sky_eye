@@ -55,6 +55,6 @@ while True:
         if cron_s[3] == "crontab":
             sched = BlockingScheduler()
             sched.add_job(run, CronTrigger.from_crontab(cron_s[4]), args=[cron_s[2]])
-            sched.start()
+    sched.start()
     time.sleep(86400)
 
