@@ -49,7 +49,7 @@ services:
   worker:
     build: ./src
     command: python3 cron.py
-    command: /bin/bash -c "mkdir ./result_pic && mkdir ./result_pic/pics && cd ./result_pic && python3 -m http.server"
+    command: /bin/bash -c "(test ! -d result_pic && mkdir ./result_pic) ; (test ! -d ./result_pic/pics && mkdir ./result_pic/pics) ; cd ./result_pic && python3 -m http.server"
     ports:
       - "8000:8000"
     networks:

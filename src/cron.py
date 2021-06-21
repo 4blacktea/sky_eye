@@ -36,8 +36,8 @@ def get_corn():
     return cron_rules
 
 
-def run():
-    os.system("./run.sh megvii.com")
+def run(main_domain):
+    os.system("./run.sh " + main_domain)
 
     
 print("Hello? Anyone there?", flush=True)
@@ -54,7 +54,7 @@ while True:
         print(cron_s, flush=True)
         if cron_s[3] == "crontab":
             sched = BlockingScheduler()
-            sched.add_job(run, CronTrigger.from_crontab(cron_s[4]))
+            sched.add_job(run, CronTrigger.from_crontab(cron_s[4]), args=[cron_s[2]])
             sched.start()
     time.sleep(86400)
 
