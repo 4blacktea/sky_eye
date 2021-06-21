@@ -49,7 +49,7 @@ services:
   worker:
     build: ./src
     command: python3 cron.py
-    command: /bin/bash -c "cd ./result_pic && python3 -m http.server"
+    command: /bin/bash -c "mkdir ./result_pic && cd ./result_pic && python3 -m http.server"
     ports:
       - "8000:8000"
     networks:
@@ -58,7 +58,8 @@ services:
         ipv4_address: 10.10.10.3
     build:
       context: ./src
-      shm_size: '1gb'
+      # shm_size: '1gb'
+      
  
 networks:
   # 配置docker network
