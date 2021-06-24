@@ -5,10 +5,10 @@ function adminer_object() {
             return 'SKY EYE';
         }
         function credentials() {
-            return array('10.122.104.158', 'vuluser', 'VulPassword4!');
+            return array('10.10.10.2', 'root', 'adminermysql');
         }
         function database() {
-            return 'vuldb_v2';
+            return 'sky_eye';
         }
     }
     return new AdminerSoftware;
