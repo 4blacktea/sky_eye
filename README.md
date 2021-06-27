@@ -11,7 +11,7 @@ docker-compose up -d
 * [x] 子域名爆破
 * [x] 端口扫描
 * [ ] web指纹检测
-* [ ] web截图
+* [x] web截图
 * [ ] web目录爆破
 * [ ] 常见漏洞扫描
 * [x] 定时任务
