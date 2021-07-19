@@ -35,6 +35,9 @@ def hello_world():
     #app.logger.debug(str(url))
     #app.logger.debug(str(data))
     kill_pid("cron.py")
+    kill_pid("subdomain_scan.py")
+    kill_pid("web_scan.py")
+    kill_pid("port_scan.py")
     os.system("python3 cron.py &")
     return str("success")
 
