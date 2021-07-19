@@ -35,7 +35,7 @@ def hello_world():
     #app.logger.debug(str(url))
     #app.logger.debug(str(data))
     kill_pid("cron.py")
-    os.system("python3 cron.py")
+    os.system("python3 cron.py &")
     return str("success")
 
 
