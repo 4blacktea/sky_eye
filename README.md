@@ -18,6 +18,7 @@ docker-compose up -d
 * [x] 数据展示
 * [ ] CPE漏洞检测
 * [x] 一键部署
+* [x] 哨兵功能
 
 ## 待fixbug
 * [x] 排除nginx功能失效
