@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-# 用于打印post请求体
+# 哨兵进程，用于在更新crontab任务后刷新任务
 
 
 from flask import Flask
@@ -13,10 +13,6 @@ import json
 def hello_world():
     #data = request.get_data()
     url = request.url
-    # print data
-    #app.logger.warning('testing warning log')
-    #app.logger.error('testing error log')
-    #app.logger.info('testing info log')
     app.logger.debug(str(url))
     app.logger.debug(str(data))
     return str(data)
