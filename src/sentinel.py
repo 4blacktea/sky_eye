@@ -12,7 +12,7 @@ import re
 import signal
 
 
-def kill_pid(program_name)
+def kill_pid(program_name):
     # 要杀死程序名称，最好全名
     # 终端执行的命令
     order_str = "ps x | grep %s" % program_name
@@ -31,12 +31,12 @@ def kill_pid(program_name)
 @app.route('/reflashcron', methods = ["GET"])
 def hello_world():
     #data = request.get_data()
-    url = request.url
-    app.logger.debug(str(url))
-    app.logger.debug(str(data))
+    #url = request.url
+    #app.logger.debug(str(url))
+    #app.logger.debug(str(data))
     kill_pid("cron.py")
     os.system("python3 cron.py")
-    return str(data)
+    return str("success")
 
 
 if __name__ == '__main__':
