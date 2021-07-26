@@ -23,3 +23,4 @@ docker-compose up -d
 * [x] 排除nginx功能失效
 * [ ] 数据库数据id失效
 * [x] css无法加载
+test
