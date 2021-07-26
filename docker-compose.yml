@@ -48,10 +48,12 @@ services:
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-file /docker-entrypoint-initdb.d/test.sql
   worker:
     build: ./src
+    command: python3 sentinel.py
     command: python3 cron.py
     command: /bin/bash -c "(test ! -d result_pic && mkdir ./result_pic) ; (test ! -d ./result_pic/pics && mkdir ./result_pic/pics) ; cd ./result_pic && python3 -m http.server"
     ports:
       - "8000:8000"
+      - "8008:8008"
     networks:
       app_net:
         # 固定子网ip，网段必须在子网络10.10.*.*
