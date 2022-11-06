@@ -1,4 +1,4 @@
-aiohttp==3.7.4.post0
+aiohttp==3.8.0.post0
 aioresponses==0.7.2
 ajpy==0.0.5
 async-timeout==3.0.1
@@ -27,7 +27,7 @@ idna==2.10
 idna-ssl==1.1.0
 importlib-metadata==2.0.0
 jsonschema==3.2.0
-lxml==4.6.2
+lxml==4.9.1
 mysql-connector==2.2.9
 paramiko==2.7.2
 progressbar2==3.53.1
