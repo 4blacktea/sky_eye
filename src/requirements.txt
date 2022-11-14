@@ -27,7 +27,7 @@ idna==2.10
 idna-ssl==1.1.0
 importlib-metadata==2.0.0
 jsonschema==3.2.0
-lxml==4.6.2
+lxml==4.9.1
 mysql-connector==2.2.9
 paramiko==2.7.2
 progressbar2==3.53.1
@@ -58,3 +58,4 @@ zope.interface==5.2.0
 APScheduler==3.7.0
 python-nmap==0.6.4
 dnspython==2.1.0
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
