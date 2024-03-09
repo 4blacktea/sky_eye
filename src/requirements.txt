@@ -1,4 +1,4 @@
-aiohttp==3.7.4.post0
+aiohttp==3.9.2
 aioresponses==0.7.2
 ajpy==0.0.5
 async-timeout==3.0.1
@@ -7,7 +7,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 bs4==0.0.1
 cached-property==1.5.2
-certifi==2020.6.20
+certifi==2023.7.22
 cffi==1.14.3
 chardet==3.0.4
 click==7.1.2
@@ -19,7 +19,7 @@ docker==4.3.1
 docker-compose==1.27.4
 dockerpty==0.4.1
 docopt==0.6.2
-Flask==2.0.1
+Flask==2.2.5
 gevent==21.1.2
 greenlet==1.0.0
 httpretty==1.0.5
@@ -39,8 +39,8 @@ pyrsistent==0.17.3
 PySocks==1.7.1
 python-dotenv==0.14.0
 python-utils==2.5.6
-PyYAML==5.3.1
-requests==2.24.0
+PyYAML==5.4
+requests==2.31.0
 requests-toolbelt==0.9.1
 shodan==1.25.0
 six==1.15.0
@@ -48,7 +48,7 @@ soupsieve==2.1
 sshuttle==1.0.5
 texttable==1.6.3
 typing-extensions==3.7.4.3
-urllib3==1.24.3
+urllib3==1.26.18
 websocket-client==0.57.0
 XlsxWriter==1.3.7
 yarl==1.6.3
@@ -57,4 +57,6 @@ zope.event==4.5.0
 zope.interface==5.2.0
 APScheduler==3.7.0
 python-nmap==0.6.4
-dnspython==2.1.0
+dnspython==2.6.1
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
+werkzeug>=2.3.8 # not directly required, pinned by Snyk to avoid a vulnerability
